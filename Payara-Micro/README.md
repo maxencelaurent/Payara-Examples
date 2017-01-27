@@ -25,10 +25,18 @@ from one Payara Micro instance to another. See http://www.payara.co.uk/payara-mi
 An example showing how to deploy a DataSource with the definition embedded in the web.xm;
 using JavaEE 7 standard features
 
+### datasource-example-psql
+
+the same but designed to use a PostgreSQL datasource
+
 ## jpa-datasource-example
 
 An example showing how to deploy a datasource defined in the web.xml and use the
 datasource from JPA.
+
+### jpa-datasource-example-psql
+
+the same but designed to use a PostgreSQL datasource
 
 ## Spring boot JPA JSF Example
 
