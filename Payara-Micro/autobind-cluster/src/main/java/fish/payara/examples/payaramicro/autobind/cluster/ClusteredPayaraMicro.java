@@ -17,18 +17,18 @@
  */
 package fish.payara.examples.payaramicro.autobind.cluster;
 
-import fish.payara.appserver.micro.services.PayaraClusterListener;
-import fish.payara.appserver.micro.services.data.InstanceDescriptor;
 import fish.payara.micro.BootstrapException;
 import fish.payara.micro.PayaraMicro;
 import fish.payara.micro.PayaraMicroRuntime;
+import fish.payara.micro.data.InstanceDescriptor;
+import fish.payara.micro.event.PayaraClusterListener;
 
 /**
  *
  * @author steve
  */
 public class ClusteredPayaraMicro implements PayaraClusterListener {
-    
+
     public static void main(String[] args) throws BootstrapException {
         PayaraMicroRuntime runtime = PayaraMicro.getInstance()
                 .setHttpAutoBind(true)
@@ -46,5 +46,5 @@ public class ClusteredPayaraMicro implements PayaraClusterListener {
     public void memberRemoved(InstanceDescriptor id) {
         System.out.println("Payara Micro Instance " + id.getMemberUUID() + " has Disappeared " + " on Host and http Port " + id.getHostName() + ":" + id.getHttpPorts().get(0));
     }
-    
+
 }
